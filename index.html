@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas CLP</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Monedas Nacional CLP (Peso Chileno)</h1>
+        
+        <div class="converter-section">
+
+            <div class="form-group">
+                <label for="monto-input">Cantidad en CLP:</label>
+                <input type="number" id="monto-input" placeholder="Ingresa la cantidad" min="0" step="1">
+            </div>
+
+            <div class="form-group">
+                <label for="conversionA">Moneda de destino:</label>
+                <select id="conversionA">
+                    <option value="dolar">Dólar Estadounidense (USD)</option>
+                    <option value="euro">Euro (EUR)</option>
+                    <option value="uf">Unidad de Fomento (UF)</option>
+                    <option value="utm">Unidad Tributaria Mensual (UTM)</option>
+                    <option value="bitcoin">Bitcoin (BTC)</option>
+                </select>
+            </div>
+
+            <div class="boton-contenedor">
+                <button id="boton-convertir">Convertir</button>
+            </div>
+
+            
+            <div class="resultado" id="resultado">
+                Ingresa una cantidad y presiona "Convertir"
+            </div>           
+            
+            <div id="mensaje-error" class="mensaje-error" style="display: none;">
+                Error al cargar los datos. Por favor, intente nuevamente.
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <div id="carga" class="carga" style="display: none;">
+            </div>
+            <canvas id="grafico-chart"></canvas>
+        </div>
+        
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
